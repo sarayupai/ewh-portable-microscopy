@@ -14,9 +14,9 @@ import 'cropperjs/dist/cropper.css';
 
 
 const MODEL_PATH = '/model/model.json';
-const IMAGE_SIZE = 224;
+const IMAGE_SIZE = 100;
 const CANVAS_SIZE = 224;
-const TOPK_PREDICTIONS = 5;
+const TOPK_PREDICTIONS = 1;
 
 const INDEXEDDB_DB = 'tensorflowjs';
 const INDEXEDDB_STORE = 'model_info_store';
@@ -249,26 +249,48 @@ export default class Classify extends Component {
    * @param topK The number of top predictions to show.
    */
   getTopKClasses = async (values, topK) => {
-    const valuesAndIndices = [];
-    for (let i = 0; i < values.length; i++) {
-      valuesAndIndices.push({value: values[i], index: i});
-    }
-    valuesAndIndices.sort((a, b) => {
-      return b.value - a.value;
-    });
-    const topkValues = new Float32Array(topK);
-    const topkIndices = new Int32Array(topK);
-    for (let i = 0; i < topK; i++) {
-      topkValues[i] = valuesAndIndices[i].value;
-      topkIndices[i] = valuesAndIndices[i].index;
-    }
-
     const topClassesAndProbs = [];
-    for (let i = 0; i < topkIndices.length; i++) {
-      topClassesAndProbs.push({
-        className: MODEL_CLASSES[topkIndices[i]],
-        probability: (topkValues[i] * 100).toFixed(2)
+    //multiple classes
+    if(values.length > 1) {
+
+      const valuesAndIndices = [];
+      for (let i = 0; i < values.length; i++) {
+        valuesAndIndices.push({value: values[i], index: i});
+      }
+
+      valuesAndIndices.sort((a, b) => {
+        return b.value - a.value;
       });
+      const topkValues = new Float32Array(topK);
+      const topkIndices = new Int32Array(topK);
+      for (let i = 0; i < topK; i++) {
+        topkValues[i] = valuesAndIndices[i].value;
+        topkIndices[i] = valuesAndIndices[i].index;
+      }
+
+      const topClassesAndProbs = [];
+      for (let i = 0; i < topkIndices.length; i++) {
+        topClassesAndProbs.push({
+          className: MODEL_CLASSES[topkIndices[i]],
+          probability: (topkValues[i] * 100).toFixed(2)
+        });
+      }
+
+    }
+    //single class
+    else {
+      var prob = values[0];
+      var idx = 1;
+      if(prob < 0.5) {
+        prob = 1 - prob;
+        idx = 0;
+      }
+
+      topClassesAndProbs.push({
+        className: MODEL_CLASSES[idx],
+        probability: (prob * 100).toFixed(2)
+      });
+
     }
     return topClassesAndProbs;
   }
