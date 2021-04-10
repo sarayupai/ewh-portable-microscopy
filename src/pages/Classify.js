@@ -182,6 +182,7 @@ export default class Classify extends Component {
     // Process and resize image before passing in to model.
     const imageData = await this.processImage(image);
     const resizedImage = tf.image.resizeBilinear(imageData, [IMAGE_SIZE, IMAGE_SIZE]);
+    //covert RBG
 
     const logits = this.model.predict(resizedImage);
     const probabilities = await logits.data();
@@ -216,6 +217,7 @@ export default class Classify extends Component {
 
     const resized = tf.image.resizeBilinear(imageCapture, [IMAGE_SIZE, IMAGE_SIZE]);
     const imageData = await this.processImage(resized);
+    //RGB
     const logits = this.model.predict(imageData);
     const probabilities = await logits.data();
     const preds = await this.getTopKClasses(probabilities, TOPK_PREDICTIONS);
@@ -239,7 +241,7 @@ export default class Classify extends Component {
   }
 
   processImage = async (image) => {
-    return tf.tidy(() => image.expandDims(0).toFloat().div(127).sub(1));
+    return tf.tidy(() => image.expandDims(0).toFloat());//.div(127).sub(1));
   }
 
   /**
