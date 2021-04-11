@@ -284,15 +284,16 @@ export default class Classify extends Component {
       var prob = values[0];
       var idx = 1;
       if(prob < 0.5) {
-        prob = 1 - prob;
+        prob = (0.5 - prob) * 2;
         idx = 0;
       }
-
+      else{
+        prob = (prob - 0.5) * 2;
+      }
       topClassesAndProbs.push({
         className: MODEL_CLASSES[idx],
         probability: (prob * 100).toFixed(2)
       });
-
     }
     return topClassesAndProbs;
   }
