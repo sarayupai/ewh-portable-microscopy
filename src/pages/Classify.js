@@ -254,47 +254,57 @@ export default class Classify extends Component {
     const topClassesAndProbs = [];
     //multiple classes
     if(values.length > 1) {
-
+      //Stores CNN predictions for each class
       const valuesAndIndices = [];
       for (let i = 0; i < values.length; i++) {
         valuesAndIndices.push({value: values[i], index: i});
       }
-
+      //Sorts predictions
       valuesAndIndices.sort((a, b) => {
         return b.value - a.value;
       });
+      //Stores topK predictions and class indices
       const topkValues = new Float32Array(topK);
       const topkIndices = new Int32Array(topK);
       for (let i = 0; i < topK; i++) {
         topkValues[i] = valuesAndIndices[i].value;
         topkIndices[i] = valuesAndIndices[i].index;
       }
-
       const topClassesAndProbs = [];
       for (let i = 0; i < topkIndices.length; i++) {
         topClassesAndProbs.push({
           className: MODEL_CLASSES[topkIndices[i]],
-          probability: (topkValues[i] * 100).toFixed(2)
+          //Calculated probability
+          //probability: (topkValues[i] * 100).toFixed(2)
+          //Raw value from CNN
+          probability: (topkValues[i]).toFixed(5)
         });
       }
 
     }
     //single class
     else {
-      var prob = values[0];
-      var idx = 1;
-      if(prob < 0.5) {
-        prob = (0.5 - prob) * 2;
+      //Stores binary prediction from CNN
+      var prediction = values[0];
+      //By default, assume prediction is inconclusive (0.5)
+      var idx = 5;
+      //Prediction is negative
+      if(prediction < 0.5) {
         idx = 0;
       }
-      else{
-        prob = (prob - 0.5) * 2;
+      //Prediction is positive
+      else if (prediction > 0.5) {
+        idx = 4;
       }
       topClassesAndProbs.push({
         className: MODEL_CLASSES[idx],
-        probability: (prob * 100).toFixed(2)
+        //Calculated probability
+        //probability: (Math.abs(prediction - 0.5) * 200).toFixed(2)
+        //Raw value from CNN
+        probability: (prediction).toFixed(5)
       });
     }
+    //Returns predictions
     return topClassesAndProbs;
   }
 
