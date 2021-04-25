@@ -291,19 +291,21 @@ export default class Classify extends Component {
       //Prediction is negative
       if(prediction < 0.5) {
         idx = 0;
+        prediction = (1-prediction)*100;
       }
       //Prediction is positive
       else if (prediction > 0.5) {
         idx = 4;
+        prediction = prediction*100;
       }
       topClassesAndProbs.push({
-        className: MODEL_CLASSES[idx],
-        //Calculated probability
-        //probability: (Math.abs(prediction - 0.5) * 200).toFixed(2)
-        //Raw value from CNN
-        probability: (prediction).toFixed(5)
-      });
-    }
+       className: MODEL_CLASSES[idx],
+       //Calculated probability
+       //probability: (Math.abs(prediction - 0.5) * 200).toFixed(2)
+       //Raw value from CNN
+       probability: (prediction).toFixed(2)
+     });
+   }
     //Returns predictions
     return topClassesAndProbs;
   }
