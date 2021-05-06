@@ -16,7 +16,31 @@ export default class Home extends Component {
           or taken with their device's camera. The app uses TensorFlow.js and a pre-trained model
           converted to the TensorFlow.js format to provide the inference capabilities.
           This model is saved locally in the browser using IndexedDB. A service worker is also used
-          to provide offline capabilities. \
+          to provide offline capabilities.
+        <br />
+        <br />
+          The Portable Microscopy team of Engineering World Health (EWH) UCSD
+          Chapter 2020-2021 developed and trained a convolutional neural network
+          to identify soil transmitted helminths in fecal samples. Soil
+          transmitted helminth infections affect nearly 1 billion people globally,
+          and are typically treated through mass drug administration without
+          diagnosis. Through this webpage, you can upload images of fecal samples
+          and our network will check for Soil Transmitted Helminths and output a
+          diagnosis.
+        <br />
+        </p>
+        <h1>Contact Us for Suggestions</h1>
+        <p>
+        If you’d like to contact us for any clarifications, questions, or
+        suggestions to this webpage and/or convolutional neural network, please
+        contact us at
+        <br />
+        * rkunowsk@ucsd.edu
+        <br />
+        * s2pai@ucsd.edu
+        <br />
+        Or fill out this google form:
+        <a> https://forms.gle/5vp3nQWbFB64kzQR9 </a>
         </p>
       </div>
     );

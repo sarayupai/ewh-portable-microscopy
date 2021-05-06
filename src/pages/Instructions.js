@@ -11,12 +11,42 @@ export default class Home extends Component {
       <div className="Instructions container">
         <h1>Instructions</h1>
         <p>
-          EWH Portable Microscopy Software for Parasitic Infection Diagnosis
-          This is a TensorFlow.js web application where users can classify images selected locally
-          or taken with their device's camera. The app uses TensorFlow.js and a pre-trained model
-          converted to the TensorFlow.js format to provide the inference capabilities.
-          This model is saved locally in the browser using IndexedDB. A service worker is also used
-          to provide offline capabilities. \
+          Steps to upload fecal sample image for STH diagnosis:
+        <br />
+        <br />
+          1. Go to the "Classify" page
+        <br />
+          2. Click on "Select Local File"
+        <br />
+          3. Click on "Browse" under Select Image File.
+        <br />
+          4. Select the image file you want to process.
+        <br />
+          5. Click on "Classify"
+        <br />
+        <br />
+          The webpage will now output an STH diagnosis.
+        </p>
+        <h1> FAQS </h1>
+        <p>
+          * How does this work?
+        <br />
+          * How to save this webpage in my browser?
+        <br />
+          * How accurate is the diagnosis?
+        <br />
+          * Why do we need diagnosis when mass drug administration exists?
+        <br />
+          * What are the effects of Soil Transmitted Helminth infections?
+        <br />
+          * Where can I learn more about Soil Transmitted Helminths?
+        <br />
+              * https://www.neglecteddiseases.gov/usaid-targeted-diseases/
+              soil-transmitted-helminths/
+        <br />
+              * https://www.who.int/news-room/fact-sheets/detail/soil-
+              transmitted-helminth-infections
+
         </p>
       </div>
     );
