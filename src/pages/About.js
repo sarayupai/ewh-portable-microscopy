@@ -11,6 +11,11 @@ export default class Home extends Component {
       <div className="About container">
         <h1>About</h1>
         <p>
+          <b>
+            Our Product
+          </b>
+        </p>
+        <p>
           EWH Portable Microscopy Software for Parasitic Infection Diagnosis
           This is a TensorFlow.js web application where users can classify images selected locally
           or taken with their device's camera. The app uses TensorFlow.js and a pre-trained model
@@ -28,6 +33,15 @@ export default class Home extends Component {
           and our network will check for Soil Transmitted Helminths and output a
           diagnosis.
         <br />
+        <br />
+        </p>
+        <p>
+        <b>
+          Our Team
+        </b>
+        </p>
+        <p>
+          The Portable Microscopy team of Engineering World Health (EWH) UCSD Chapter 2020-2021
         </p>
         <h1>Contact Us for Suggestions</h1>
         <p>
