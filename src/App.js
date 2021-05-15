@@ -32,13 +32,13 @@ class App extends Component {
         <div className="App">
           <Container>
             <Navbar collapseOnSelect className="app-nav-bar" variant="dark" expand="lg">
-              <Navbar.Brand href="/">WebClassify</Navbar.Brand>
+              <Navbar.Brand href="/ewh-portable-microscopy">WebClassify</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="">
-                  <Link className="nav-link" to="/classify">Classify</Link>
-                  <Link className="nav-link" to="/">Instructions</Link>
-                  <Link className="nav-link" to="/about">About</Link>
+                  <Link className="nav-link" to="/ewh-portable-microscopy/classify">Classify</Link>
+                  <Link className="nav-link" to="/ewh-portable-microscopy">Instructions</Link>
+                  <Link className="nav-link" to="/ewh-portable-microscopy/about">About</Link>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

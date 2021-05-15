@@ -49,12 +49,12 @@ export default class Home extends Component {
         suggestions to this webpage and/or convolutional neural network, please
         contact us at
         <br />
-        * rkunowsk@ucsd.edu
+        - rkunowsk@ucsd.edu
         <br />
-        * s2pai@ucsd.edu
+        - s2pai@ucsd.edu
         <br />
         Or fill out this google form:
-        <a> https://forms.gle/5vp3nQWbFB64kzQR9 </a>
+        <a href="//forms.gle/5vp3nQWbFB64kzQR9"> Google Form for Suggestions or Questions</a>
         </p>
       </div>
     );
