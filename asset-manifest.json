@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ewh-portable-microscopy/static/css/main.0faf5e9c.chunk.css",
-    "main.js": "/ewh-portable-microscopy/static/js/main.540d3f83.chunk.js",
-    "main.js.map": "/ewh-portable-microscopy/static/js/main.540d3f83.chunk.js.map",
+    "main.js": "/ewh-portable-microscopy/static/js/main.12a0d4d5.chunk.js",
+    "main.js.map": "/ewh-portable-microscopy/static/js/main.12a0d4d5.chunk.js.map",
     "runtime-main.js": "/ewh-portable-microscopy/static/js/runtime-main.fe72d50b.js",
     "runtime-main.js.map": "/ewh-portable-microscopy/static/js/runtime-main.fe72d50b.js.map",
-    "static/css/2.89d6597a.chunk.css": "/ewh-portable-microscopy/static/css/2.89d6597a.chunk.css",
-    "static/js/2.64dab485.chunk.js": "/ewh-portable-microscopy/static/js/2.64dab485.chunk.js",
-    "static/js/2.64dab485.chunk.js.map": "/ewh-portable-microscopy/static/js/2.64dab485.chunk.js.map",
+    "static/css/2.f23adf77.chunk.css": "/ewh-portable-microscopy/static/css/2.f23adf77.chunk.css",
+    "static/js/2.8344d491.chunk.js": "/ewh-portable-microscopy/static/js/2.8344d491.chunk.js",
+    "static/js/2.8344d491.chunk.js.map": "/ewh-portable-microscopy/static/js/2.8344d491.chunk.js.map",
     "index.html": "/ewh-portable-microscopy/index.html",
-    "static/css/2.89d6597a.chunk.css.map": "/ewh-portable-microscopy/static/css/2.89d6597a.chunk.css.map",
+    "static/css/2.f23adf77.chunk.css.map": "/ewh-portable-microscopy/static/css/2.f23adf77.chunk.css.map",
     "static/css/main.0faf5e9c.chunk.css.map": "/ewh-portable-microscopy/static/css/main.0faf5e9c.chunk.css.map",
-    "static/js/2.64dab485.chunk.js.LICENSE.txt": "/ewh-portable-microscopy/static/js/2.64dab485.chunk.js.LICENSE.txt"
+    "static/js/2.8344d491.chunk.js.LICENSE.txt": "/ewh-portable-microscopy/static/js/2.8344d491.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fe72d50b.js",
-    "static/css/2.89d6597a.chunk.css",
-    "static/js/2.64dab485.chunk.js",
+    "static/css/2.f23adf77.chunk.css",
+    "static/js/2.8344d491.chunk.js",
     "static/css/main.0faf5e9c.chunk.css",
-    "static/js/main.540d3f83.chunk.js"
+    "static/js/main.12a0d4d5.chunk.js"
   ]
 }
