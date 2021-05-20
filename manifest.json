@@ -3,17 +3,17 @@
   "name": "Progressive Web Classification App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "ewh-portable-microscopy/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/images/icon-192.png",
+      "src": "/ewh-portable-microscopy/images/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icon-512.png",
+      "src": "/ewh-portable-microscopy/images/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
