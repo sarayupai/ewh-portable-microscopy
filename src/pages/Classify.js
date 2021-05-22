@@ -13,7 +13,7 @@ import './Classify.css';
 import 'cropperjs/dist/cropper.css';
 
 
-const MODEL_PATH = '/model/model.json';
+const MODEL_PATH = '/ewh-portable-microscopy/model/model.json';
 const IMAGE_SIZE = 100;
 const CANVAS_SIZE = 224;
 const TOPK_PREDICTIONS = 1;
@@ -195,13 +195,13 @@ export default class Classify extends Component {
     });
 
     // Draw thumbnail to UI.
-    const context = this.refs.canvas.getContext('2d');
+    //const context = this.refs.canvas.getContext('2d');
     const ratioX = CANVAS_SIZE / croppedCanvas.width;
     const ratioY = CANVAS_SIZE / croppedCanvas.height;
     const ratio = Math.min(ratioX, ratioY);
-    context.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-    context.drawImage(croppedCanvas, 0, 0,
-                      croppedCanvas.width * ratio, croppedCanvas.height * ratio);
+    //context.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    //context.drawImage(croppedCanvas, 0, 0,
+    //                  croppedCanvas.width * ratio, croppedCanvas.height * ratio);
 
     // Dispose of tensors we are finished with.
     image.dispose();
@@ -473,7 +473,7 @@ export default class Classify extends Component {
           { this.state.predictions.length > 0 &&
             <div className="classification-results">
               <h3>Predictions</h3>
-              <canvas ref="canvas" width={CANVAS_SIZE} height={CANVAS_SIZE} />
+              <canvas ref="canvas" width={CANVAS_SIZE} height={CANVAS_SIZE}></canvas>
               <br />
               <ListGroup>
               {this.state.predictions.map((category) => {
