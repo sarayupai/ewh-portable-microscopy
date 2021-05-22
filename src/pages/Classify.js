@@ -242,6 +242,7 @@ export default class Classify extends Component {
 
   processImage = async (image) => {
     return tf.tidy(() => image.expandDims(0).toFloat());//.div(127).sub(1));
+    console.log('Processing the image');
   }
 
   /**
