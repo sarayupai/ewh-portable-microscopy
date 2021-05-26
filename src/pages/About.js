@@ -53,8 +53,8 @@ export default class Home extends Component {
         <br />
         - s2pai@ucsd.edu
         <br />
-        Or fill out this google form:
-        <a href="//forms.gle/5vp3nQWbFB64kzQR9"> Google Form for Suggestions or Questions</a>
+        Or fill out this google form (Please copy and paste the link into a new tab):
+        forms.gle/5vp3nQWbFB64kzQR9
         </p>
       </div>
     );
