@@ -44,15 +44,11 @@ export default class Home extends Component {
             uses
         <br />
         <br />
-          <b> How to save this webpage in my browser?
+          <b> How to save this web app for offline use?
           </b>
           <br />
-            In Chrome, click on the three dots at the top left of the page. You can either:
-          <br /> 1) Select "Bookmarks" and select "Bookmark this tab" to bookmark this page on your
-           browser.
-          <br /> 2) Select "More Tools" and select "Save Page as" to save this page locally on your
-           computer.
-          <br /> 3) Select "More Tools" and select "Create shortcut" to create a shortcut locally
+            Open this page in Chrome, click on the three dots at the top left of the page.
+          <br /> Select "More Tools" and select "Create shortcut" to create a shortcut locally
           on your computer.
         <br />
         <br />
@@ -85,32 +81,28 @@ export default class Home extends Component {
         <br />
         The World Health Organization (WHO) lists the effects of STH infection as the following:
         <br />
-        <br />
-        * "The worms feed on host tissues, including blood, which leads to a loss of iron and
+        - "The worms feed on host tissues, including blood, which leads to a loss of iron and
          protein."
         <br />
-        * "Hookworms in addition cause chronic intestinal blood loss that can result in anaemia."
+        - "Hookworms in addition cause chronic intestinal blood loss that can result in anaemia."
         <br />
-        * "The worms increase malabsorption of nutrients. In addition, roundworm may possibly
+        - "The worms increase malabsorption of nutrients. In addition, roundworm may possibly
         compete
         for vitamin A in the intestine."
         <br />
-        * "Some soil-transmitted helminths also cause loss of appetite and, therefore, a reduction
+        - "Some soil-transmitted helminths also cause loss of appetite and, therefore, a reduction
          of nutritional intake and physical fitness."
         <br />
         <br />
           <b> Where can I learn more about Soil Transmitted Helminths?
           </b>
         <br />
-          Here are some links to help supplement your knowledge of Soil Transmitted Helminths:
+          Here are some links to help supplement your knowledge of Soil Transmitted Helminths (Please copy and paste the links into a new tab):
         <br />
-        <a href=
-        "https://www.who.int/news-room/fact-sheets/detail/soil-transmitted-helminth-infections"
-        > * WHO Soil Transmitted Helminth
-        Infections</a>
+        https://www.who.int/news-room/fact-sheets/detail/soil-transmitted-helminth-infections
         <br />
-        <a href="https://www.neglecteddiseases.gov/usaid-targeted-
-        diseases/soil-transmitted-helminths"> * USAID Neglected Diseases</a>
+        https://www.neglecteddiseases.gov/usaid-targeted-
+        diseases/soil-transmitted-helminths
         </p>
       </div>
     );
