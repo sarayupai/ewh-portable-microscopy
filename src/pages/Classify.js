@@ -175,7 +175,7 @@ export default class Classify extends Component {
 
   classifyLocalImage = async () => {
     this.setState({ isClassifying: true });
-
+    console.log('Classifying local image');
     const croppedCanvas = this.refs.cropper.getCroppedCanvas();
     const image = tf.tidy( () => tf.browser.fromPixels(croppedCanvas).toFloat());
 
@@ -195,13 +195,13 @@ export default class Classify extends Component {
     });
 
     // Draw thumbnail to UI.
-    //const context = this.refs.canvas.getContext('2d');
+    const context = this.refs.canvas.getContext('2d');
     const ratioX = CANVAS_SIZE / croppedCanvas.width;
     const ratioY = CANVAS_SIZE / croppedCanvas.height;
     const ratio = Math.min(ratioX, ratioY);
-    //context.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-    //context.drawImage(croppedCanvas, 0, 0,
-    //                  croppedCanvas.width * ratio, croppedCanvas.height * ratio);
+    context.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    context.drawImage(croppedCanvas, 0, 0,
+                      croppedCanvas.width * ratio, croppedCanvas.height * ratio);
 
     // Dispose of tensors we are finished with.
     image.dispose();
@@ -241,8 +241,8 @@ export default class Classify extends Component {
   }
 
   processImage = async (image) => {
-    return tf.tidy(() => image.expandDims(0).toFloat());//.div(127).sub(1));
     console.log('Processing the image');
+    return tf.tidy(() => image.expandDims(0).toFloat());//.div(127).sub(1));
   }
 
   /**
