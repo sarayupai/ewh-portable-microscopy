@@ -44,15 +44,11 @@ export default class Home extends Component {
             uses
         <br />
         <br />
-          <b> How to save this webpage in my browser?
+          <b> How to save this web app for offline use?
           </b>
           <br />
-            In Chrome, click on the three dots at the top left of the page. You can either:
-          <br /> 1) Select "Bookmarks" and select "Bookmark this tab" to bookmark this page on your
-           browser.
-          <br /> 2) Select "More Tools" and select "Save Page as" to save this page locally on your
-           computer.
-          <br /> 3) Select "More Tools" and select "Create shortcut" to create a shortcut locally
+            In Chrome, click on the three dots at the top left of the page.
+          <br /> Select "More Tools" and select "Create shortcut" to create a shortcut locally
           on your computer.
         <br />
         <br />
