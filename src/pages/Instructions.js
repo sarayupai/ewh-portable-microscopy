@@ -47,7 +47,7 @@ export default class Home extends Component {
           <b> How to save this web app for offline use?
           </b>
           <br />
-            In Chrome, click on the three dots at the top left of the page.
+            Open this page in Chrome, click on the three dots at the top left of the page.
           <br /> Select "More Tools" and select "Create shortcut" to create a shortcut locally
           on your computer.
         <br />
