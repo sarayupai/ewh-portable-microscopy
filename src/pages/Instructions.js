@@ -97,7 +97,8 @@ export default class Home extends Component {
           <b> Where can I learn more about Soil Transmitted Helminths?
           </b>
         <br />
-          Here are some links to help supplement your knowledge of Soil Transmitted Helminths (Please copy and paste the links into a new tab):
+          Here are some links to help supplement your knowledge of Soil Transmitted Helminths
+           (Please copy and paste the links into a new tab):
         <br />
         https://www.who.int/news-room/fact-sheets/detail/soil-transmitted-helminth-infections
         <br />

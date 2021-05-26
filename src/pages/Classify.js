@@ -187,6 +187,7 @@ export default class Classify extends Component {
     const logits = this.model.predict(resizedImage);
     const probabilities = await logits.data();
     const preds = await this.getTopKClasses(probabilities, TOPK_PREDICTIONS);
+    console.log(preds.length);
 
     this.setState({
       predictions: preds,
